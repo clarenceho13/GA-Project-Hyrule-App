@@ -8,7 +8,7 @@ export default function Home() {
       <h2>Gameplay</h2>
       <p>Similar to the original 1986 Legend of Zelda, players are given minimal instruction and can explore the open world freely. Tasks include collecting various items and gear to aid in objectives such as puzzle-solving or side quests. The world features minimal structure and is designed to encourage exploration and experimentation, and the main story quest can be completed in a nonlinear fashion.</p>
       <h2>Trailer</h2>
-      <iframe width="620" height="515"
+      <iframe width="600" height="340"
 src="https://www.youtube.com/embed/zw47_q9wbBE">
 </iframe>
     </React.Fragment>

@@ -32,18 +32,21 @@ useEffect(()=>{
 const fetchCreatures1=async ()=>{
   const res=await fetch(creaturesUrl);
   let DATA= await res.json();
+  setLoading(true);
   setCreatures1(DATA.data.food)
   setLoading(false);
 }
 const fetchCreatures2=async ()=>{
   const res=await fetch(creaturesUrl);
   let DATA= await res.json();
+  setLoading(true);
   setCreatures2(DATA.data.non_food)
   setLoading(false);
 }
 const fetchEquipment=async ()=>{
   const res=await fetch(equipmentUrl);
   let DATA= await res.json();
+  setLoading(true);
   setEquipment(DATA.data)
   setLoading(false);
 }
@@ -56,12 +59,14 @@ const fetchMaterials=async ()=>{
 const fetchMonsters=async ()=>{
   const res=await fetch(monstersUrl);
   let DATA= await res.json();
+  setLoading(true);
   setMonsters(DATA.data)
   setLoading(false);
 }
 const fetchTreasure=async ()=>{
   const res=await fetch(treasureUrl);
   let DATA= await res.json();
+  setLoading(true);
   setTreasure(DATA.data)
   setLoading(false);
 }
