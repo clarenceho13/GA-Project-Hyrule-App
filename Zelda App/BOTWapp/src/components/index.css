@@ -1,0 +1,20 @@
+.Card {
+    text-align: center;
+    text-transform: capitalize;
+}
+.Maincard {
+   width: 300px;
+   height: 350px;
+}
+.Maincard:hover {
+    width: 300px;
+    height: 550px;
+}
+
+.Text {
+    visibility: hidden;
+}
+
+.Maincard:hover .Text{
+    visibility: initial;
+}

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Card, Grid, Image } from 'semantic-ui-react';
+import './index.css'
+
 
 export default function Treasure({DATA}) {
   return (
@@ -9,14 +11,13 @@ export default function Treasure({DATA}) {
       {DATA.map((treasure, i)=>{
           return (
               <Grid.Column key={i}>
-              <Card>
+              <Card className="Maincard">
               <Card.Content>
-              <Card.Header>{treasure.name}</Card.Header>
+              <Card.Header className='Card'>{treasure.name}</Card.Header>
               <Card.Description>
-              <strong>Image</strong>
               <Image src={treasure.image}></Image>
-              <strong>Description</strong>
-              <p>{treasure.description}</p>
+              <strong>Description:</strong>
+              <p className='Text'>{treasure.description}</p>
               </Card.Description>
               </Card.Content>
               </Card>

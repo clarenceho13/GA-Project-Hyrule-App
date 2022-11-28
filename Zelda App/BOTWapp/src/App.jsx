@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { Container, Dimmer, Loader  } from 'semantic-ui-react';
+import { Container, Dimmer, Loader } from 'semantic-ui-react';
 import { Routes , Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -53,6 +53,7 @@ const fetchEquipment=async ()=>{
 const fetchMaterials=async ()=>{
   const res=await fetch(materialsUrl);
   let DATA= await res.json();
+  setLoading(true);
   setMaterials(DATA.data)
   setLoading(false);
 }
@@ -102,7 +103,7 @@ fetchTreasure();
         <Route path='/treasure' element={<Treasure DATA={treasure} />}> 
         </Route>
       </Routes>)}
-    
+      
      </Container>
       
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Grid, Image  } from 'semantic-ui-react';
+import './index.css'
 
 export default function Monsters({DATA}) {
   return (
@@ -9,14 +10,13 @@ export default function Monsters({DATA}) {
       {DATA.map((monsters, i)=>{
           return (
               <Grid.Column key={i}>
-              <Card>
+              <Card className="Maincard">
               <Card.Content>
-              <Card.Header>{monsters.name}</Card.Header>
+              <Card.Header className='Card'>{monsters.name}</Card.Header>
               <Card.Description>
-              <strong>Image</strong>
               <Image src={monsters.image}></Image>
               <strong>Description</strong>
-              <p>{monsters.description}</p>
+              <p className='Text'>{monsters.description}</p>
               </Card.Description>
               </Card.Content>
               </Card>
