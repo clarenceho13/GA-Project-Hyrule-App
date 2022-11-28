@@ -5,7 +5,7 @@ import './index.css'
 export default function Creatures2({DATA}) {
   return (
     <React.Fragment>
-      <h1>Creatures-NonFood</h1>
+      <h1>Creatures:Non-Edible</h1>
       <Grid columns={3}>
     {DATA.map((creatures2, i)=>{
         return (

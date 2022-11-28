@@ -5,6 +5,7 @@
 .Maincard {
    width: 300px;
    height: 350px;
+   
 }
 .Maincard:hover {
     width: 300px;
