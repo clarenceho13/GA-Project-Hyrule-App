@@ -2,12 +2,14 @@ import React from 'react'
 import { Menu, Container } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
+
 export default function Navbar() {
+  
   return (
     <Menu inverted>
     <Container>
      <Link to='/'>
-     <Menu.Item name="The Lengend of Zelda, Breathe of the Wild" /> 
+     <Menu.Item name="The Legend of Zelda: Breathe of the Wild" /> 
      </Link>
     
      <Link to='/creatures1'>
