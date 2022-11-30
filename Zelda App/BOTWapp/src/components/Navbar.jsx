@@ -12,12 +12,8 @@ export default function Navbar() {
      <Menu.Item name="The Legend of Zelda: Breathe of the Wild" /> 
      </Link>
     
-     <Link to='/creatures1'>
-     <Menu.Item name="creatures1" />
-     </Link>
-
-     <Link to='/creatures2'>
-     <Menu.Item name="creatures2" />
+     <Link to='/creatures'>
+     <Menu.Item name="creatures" />
      </Link>
      
      <Link to='/equipment'>

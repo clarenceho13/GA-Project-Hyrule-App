@@ -3,16 +3,15 @@ import { Container, Dimmer, Loader } from 'semantic-ui-react';
 import { Routes , Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Creatures1 from './components/Creatures1';
-import Creatures2 from './components/Creatures2';
+import Creatures from './components/Creatures';
 import Equipment from './components/Equipment';
 import Materials from './components/Materials';
 import Monsters from './components/Monsters';
 import Treasure from './components/Treasure';
 
 function App() {
-  const [creatures1, setCreatures1]=useState([]);
-  const [creatures2, setCreatures2]=useState([]); //set the initial as empty arrays, data will be pushed in setState
+  const [creatures, setCreatures]=useState([]);
+  //const [creatures2, setCreatures2]=useState([]); //set the initial as empty arrays, data will be pushed in setState
   const [equipment, setEquipment]=useState([]);
   const [materials, setMaterials]=useState([]);
   const [monsters, setMonsters]=useState([]);
@@ -29,20 +28,15 @@ const treasureUrl="https://botw-compendium.herokuapp.com/api/v2/category/treasur
 
 //fetch data through useEffect 
 useEffect(()=>{
-const fetchCreatures1=async ()=>{
+const fetchCreatures=async ()=>{
   const res=await fetch(creaturesUrl);
   let DATA= await res.json();
   setLoading(true);
-  setCreatures1(DATA.data.food)
+  setCreatures([...DATA.data.food,...DATA.data.non_food]);
+  //setCreatures(DATA.data.non_food);
   setLoading(false);
 }
-const fetchCreatures2=async ()=>{
-  const res=await fetch(creaturesUrl);
-  let DATA= await res.json();
-  setLoading(true);
-  setCreatures2(DATA.data.non_food)
-  setLoading(false);
-}
+
 const fetchEquipment=async ()=>{
   const res=await fetch(equipmentUrl);
   let DATA= await res.json();
@@ -72,8 +66,7 @@ const fetchTreasure=async ()=>{
   setLoading(false);
 }
 //call the functions
-fetchCreatures1(); 
-fetchCreatures2(); 
+fetchCreatures(); 
 fetchEquipment();
 fetchMaterials();
 fetchMonsters();
@@ -90,9 +83,7 @@ fetchTreasure();
       ): ( <Routes> 
         <Route path='/' element={<Home />}> 
         </Route>
-        <Route path='/creatures1' element={<Creatures1 DATA={creatures1}/>}> 
-        </Route>
-        <Route path='/creatures2' element={<Creatures2 DATA={creatures2}/>}> 
+        <Route path='/creatures' element={<Creatures DATA={creatures}/>}> 
         </Route>
         <Route path='/equipment' element={<Equipment DATA={equipment} />}>
         </Route>
