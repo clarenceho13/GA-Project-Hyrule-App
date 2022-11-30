@@ -77,8 +77,8 @@ fetchTreasure();
     <Navbar />
      <Container> 
      {loading ? (
-      <Dimmer active inverted>
-      <Loader inverted>Loading</Loader>
+      <Dimmer active>
+      <Loader>Loading</Loader>
       </Dimmer>
       ): ( <Routes> 
         <Route path='/' element={<Home />}> 

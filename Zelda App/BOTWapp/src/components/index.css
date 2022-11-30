@@ -22,3 +22,8 @@
 .Maincard:hover .Text{
     visibility: initial;
 }
+
+.Search {
+    width: 300px;
+    border-radius: 0.5rem;
+}
