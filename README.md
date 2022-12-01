@@ -6,15 +6,13 @@ MVP-Minimum Viable Product
 <li>Build a web application using vite.</li>
 <li>Use React framework to build your application with at least: </li>
 <ul>
-</div>
-<div>
-<ul>
+<ol>
 <li>3 components</li>
 <li>4 props</li>
 <li>2 state properties</li>
 <li>2 setState</li>
 <li>2 routes</li>
-</ul>
+</ol>
 </div>
 <div>
 <ul>
