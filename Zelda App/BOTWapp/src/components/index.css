@@ -4,13 +4,13 @@
 }
 .Maincard {
    width: 300px;
-   height: 350px;
+   height: 330px;
    margin: 30px;
    
 }
 .Maincard:hover {
     width: 300px;
-    height: 600px;
+    height: 650px;
     transform: scale(1.3);
 }
 .Text {
@@ -22,6 +22,81 @@
 .Maincard:hover .Text{
     visibility: initial;
 }
+
+.Card-T {
+    text-align: center;
+    text-transform: capitalize;
+}
+.Maincard-T {
+   width: 300px;
+   height: 300px;
+   margin: 30px;
+   
+}
+.Maincard-T:hover {
+    width: 300px;
+    height: 480px;
+    transform: scale(1.3);
+}
+.Text-T {
+    visibility: hidden;
+    margin: 10px;
+    
+}
+
+.Maincard-T:hover .Text-T{
+    visibility: initial;
+}
+
+.Card-Ma {
+    text-align: center;
+    text-transform: capitalize;
+}
+.Maincard-Ma {
+   width: 300px;
+   height: 330px;
+   margin: 30px;
+   
+}
+.Maincard-Ma:hover {
+    width: 300px;
+    height: 515px;
+    transform: scale(1.3);
+}
+.Text-Ma {
+    visibility: hidden;
+    margin: 10px;
+    
+}
+.Maincard-Ma:hover .Text-Ma{
+    visibility: initial;
+}
+
+.Card-Cr {
+    text-align: center;
+    text-transform: capitalize;
+}
+.Maincard-Cr {
+   width: 300px;
+   height: 330px;
+   margin: 30px;
+   
+}
+.Maincard-Cr:hover {
+    width: 300px;
+    height: 630px;
+    transform: scale(1.3);
+}
+.Text-Cr {
+    visibility: hidden;
+    margin: 10px;
+    
+}
+
+.Maincard-Cr:hover .Text-Cr{
+    visibility: initial;
+}
+
 
 .Search {
     width: 300px;

@@ -3,7 +3,7 @@ import { Card, Grid, Image } from 'semantic-ui-react';
 import './index.css'
 
 export default function Equipment({DATA}) {
-  const [query, setQuery]= useState('')
+  const [query, setQuery]= useState('');
   console.log(query)
   return (
     <React.Fragment>
@@ -16,7 +16,8 @@ export default function Equipment({DATA}) {
       </h3>
       </h1>
       <Grid columns={3}>
-    {DATA.filter((equipment)=>equipment.name.toLowerCase().includes(query))
+    {DATA.filter((equipment)=>equipment.name.toLowerCase().includes(query) ||
+      equipment.description.toLowerCase().includes(query))
       .map((equipment, i)=>{
         return (
             <Grid.Column key={i}>
@@ -25,8 +26,14 @@ export default function Equipment({DATA}) {
             <Card.Header className='Card'>{equipment.name}</Card.Header>
             <Card.Description>
             <Image src={equipment.image}></Image>
-            <strong>Description:</strong>
+            <strong className='Text'>Description:</strong>
             <p className='Text'>{equipment.description}</p>
+            <strong className='Text'>Attack:</strong>
+            <p className='Text'>{equipment.attack}</p>
+            <strong className='Text'>Defense:</strong>
+            <p className='Text'>{equipment.defense}</p>
+            <strong className='Text'>Common Locations:</strong>
+            <p className='Text'>{String(equipment.common_locations)}</p>
             </Card.Description>
             </Card.Content>
             </Card>

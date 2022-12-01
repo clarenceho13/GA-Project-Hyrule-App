@@ -2,8 +2,6 @@ import React, {useState} from 'react'
 import { Card, Grid, Image } from 'semantic-ui-react';
 import './index.css'
 
-
-
 export default function Materials({DATA}) {
   const [query, setQuery]= useState('')
   console.log(query)
@@ -18,17 +16,20 @@ export default function Materials({DATA}) {
       </h3>
       </h1>
       <Grid columns={3}>
-    {DATA.filter((materials)=>materials.name.toLowerCase().includes(query))
+    {DATA.filter((materials)=>materials.name.toLowerCase().includes(query) ||
+      materials.description.toLowerCase().includes(query))
       .map((materials, i)=>{
         return (
             <Grid.Column key={i}>
-            <Card className="Maincard">
+            <Card className="Maincard-Ma">
             <Card.Content>
-            <Card.Header className='Card'>{materials.name}</Card.Header>
+            <Card.Header className='Card-Ma'>{materials.name}</Card.Header>
             <Card.Description>
             <Image src={materials.image}></Image>
-            <strong>Description:</strong>
-            <p className='Text'>{materials.description}</p>
+            <strong className='Text-Ma'>Description:</strong>
+            <p className='Text-Ma'>{materials.description}</p>
+            <strong className='Text-Ma'>Common Locations:</strong>
+            <p className='Text-Ma'>{String(materials.common_locations)}</p>
             </Card.Description>
             </Card.Content>
             </Card>

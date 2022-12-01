@@ -16,7 +16,8 @@ export default function Monsters({DATA}) {
       </h3>
       </h1>
       <Grid columns={3}>
-      {DATA.filter((monsters)=>monsters.name.toLowerCase().includes(query))
+      {DATA.filter((monsters)=>monsters.name.toLowerCase().includes(query) || 
+        monsters.description.toLowerCase().includes(query))
         .map((monsters, i)=>{
           return (
               <Grid.Column key={i}>
@@ -25,8 +26,10 @@ export default function Monsters({DATA}) {
               <Card.Header className='Card'>{monsters.name}</Card.Header>
               <Card.Description>
               <Image src={monsters.image}></Image>
-              <strong>Description</strong>
+              <strong className='Text'>Description:</strong>
               <p className='Text'>{monsters.description}</p>
+              <strong className='Text'>Common Locations:</strong>
+              <p className='Text'>{String(monsters.common_locations)}</p>
               </Card.Description>
               </Card.Content>
               </Card>

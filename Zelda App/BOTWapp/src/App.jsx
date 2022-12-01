@@ -11,7 +11,6 @@ import Treasure from './components/Treasure';
 
 function App() {
   const [creatures, setCreatures]=useState([]);
-  //const [creatures2, setCreatures2]=useState([]); //set the initial as empty arrays, data will be pushed in setState
   const [equipment, setEquipment]=useState([]);
   const [materials, setMaterials]=useState([]);
   const [monsters, setMonsters]=useState([]);
@@ -33,7 +32,6 @@ const fetchCreatures=async ()=>{
   let DATA= await res.json();
   setLoading(true);
   setCreatures([...DATA.data.food,...DATA.data.non_food]);
-  //setCreatures(DATA.data.non_food);
   setLoading(false);
 }
 
@@ -77,7 +75,7 @@ fetchTreasure();
     <Navbar />
      <Container> 
      {loading ? (
-      <Dimmer active>
+      <Dimmer active inverted>
       <Loader>Loading</Loader>
       </Dimmer>
       ): ( <Routes> 
@@ -96,10 +94,7 @@ fetchTreasure();
       </Routes>)}
       
      </Container>
-      <Container>
-      
-      
-      </Container>
+
     </div>
   )
 }
