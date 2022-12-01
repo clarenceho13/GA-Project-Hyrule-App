@@ -7,14 +7,14 @@ export default function Equipment({DATA}) {
   console.log(query)
   return (
     <React.Fragment>
-      <h1>Equipment 
+      <h1>Equipment </h1>
       <h3><input key={DATA.id} 
       type="text"
       placeholder="Search..."
       className="Search"
       onChange={(e)=> setQuery(e.target.value)}/>
       </h3>
-      </h1>
+      
       <Grid columns={3}>
     {DATA.filter((equipment)=>equipment.name.toLowerCase().includes(query) ||
       equipment.description.toLowerCase().includes(query))

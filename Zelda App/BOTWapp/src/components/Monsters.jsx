@@ -7,14 +7,15 @@ export default function Monsters({DATA}) {
   console.log(query)
   return (
     <React.Fragment>
-      <h1>Monsters
+      <h1>Monsters </h1>
+      
       <h3><input key={DATA.id} 
       type="text"
       placeholder="Search..."
       className="Search"
       onChange={(e)=> setQuery(e.target.value)}/>
       </h3>
-      </h1>
+      
       <Grid columns={3}>
       {DATA.filter((monsters)=>monsters.name.toLowerCase().includes(query) || 
         monsters.description.toLowerCase().includes(query))

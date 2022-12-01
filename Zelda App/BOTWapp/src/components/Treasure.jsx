@@ -6,6 +6,8 @@ export default function Treasure({DATA}) {
   return (
     <React.Fragment>
       <h1>Treasure</h1>
+      <br />
+      <br />
       <Grid columns={4}>
       {DATA.map((treasure, i)=>{
           return (

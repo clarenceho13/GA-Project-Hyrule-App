@@ -5,19 +5,18 @@ import './index.css'
 
 export default function Creatures({DATA}) {
   const [query, setQuery]= useState('');
- // const [selects, setSelects]=useState();
+ 
   console.log(query)
   return (
     <React.Fragment>
-      <h1>Creatures 
+      <h1>Creatures</h1>
       <h3><input key={DATA.id} 
       type="text"
       placeholder="Search..."
       className="Search"
       onChange={(e)=> setQuery(e.target.value)}/>
       </h3>
-      </h1>
-     
+      
       <Grid columns={3}>
     {DATA.filter((creatures)=>creatures.name.toLowerCase().includes(query) ||
       creatures.description.toLowerCase().includes(query))
