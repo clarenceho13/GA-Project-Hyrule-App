@@ -39,6 +39,6 @@ The aim of the project is to create an app through an API. Through this app, my 
 <h1>API Used</h1>
 https://gadhagod.github.io/Hyrule-Compendium-API/#/?id=demo
 
-
-
+<h1>Deployed website on Vercel </h1>
+https://ga-project-hyrule-app.vercel.app/
 
